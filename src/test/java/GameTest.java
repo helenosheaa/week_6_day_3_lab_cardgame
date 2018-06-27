@@ -6,14 +6,17 @@ import static org.junit.Assert.assertEquals;
 public class GameTest {
 
     Deck deck;
-    Player players;
+    Player player1;
+    Player player2;
     Game game;
 
     @Before
     public void before() {
         game = new Game();
         deck = new Deck();
-        players = new Player("John");
+        player1 = new Player("John");
+        player2 = new Player("Jill");
+
     }
 
     @Test
@@ -29,11 +32,8 @@ public class GameTest {
 
     @Test
     public void dealCard() {
-        game.shuffleDeck();
-        Card removedCard = deck.removeCard();
-        players.hand.add(removedCard);
-        assertEquals(1, players.hand.size());
-
+        game.dealCard(player1);
+        assertEquals(1, this.player1.hand.size());
     }
 
 

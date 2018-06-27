@@ -15,7 +15,11 @@ public class Game {
         Collections.shuffle(this.deck.getCards());
     }
 
-
+    public void dealCard(Player player) {
+        this.shuffleDeck();
+        Card removedCard = deck.removeCard();
+        player.hand.add(removedCard);
+    }
 
 
 
