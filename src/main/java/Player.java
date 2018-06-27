@@ -4,10 +4,10 @@ import java.util.ArrayList;
 public class Player {
 
     String name;
-    ArrayList<Card> cards;
+    ArrayList<Card> hand;
 
     public Player(String name){
-        this.cards = new ArrayList<Card>();
+        this.hand = new ArrayList<>();
         this.name = name;
     }
 
