@@ -27,4 +27,8 @@ public class Deck {
     public ArrayList<Card> getCards(){
         return this.cards;
     }
+
+    public Card removeCard() {
+        return this.cards.remove(0);
+    }
 }
