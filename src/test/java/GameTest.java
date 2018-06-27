@@ -35,14 +35,22 @@ public class GameTest {
         game.dealCard(player1);
         assertEquals(1, this.player1.hand.size());
     }
+//
+//    @Test
+//    public String player1Wins(){
+//        game.dealCard(player1);
+//        game.dealCard(player2);
+//        assertEquals("Player 1 wins", game.play(player1, player2));
+//
+//    }
+//
+//    @Test
+//    public String player2Wins(){
+//        game.dealCard(player2);
+//        game.dealCard(player1);
+//        assertEquals("Player 2 wins", game.play(player1, player2));
+//    }
 
-    @Test
-    public void player1Wins(){
-        game.dealCard(player1);
-        game.dealCard(player2);
-        assertEquals(player1, game.play(player1, player2));
-
-    }
 
 
     }

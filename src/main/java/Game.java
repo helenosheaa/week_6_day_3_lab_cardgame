@@ -20,14 +20,23 @@ public class Game {
         player.hand.add(removedCard);
     }
 
-    public Player play(Player player1, Player player2) {
-        if (player1.hand.get(0).getRank().getValue()
-                > player2.hand.get(0).getRank().getValue()){
-            return player1;
-            }
-            else {
-            return player2;
+    public void play(Player player1, Player player2) {
+        if (player1.hand.get(0).getRank().getValue() == player2.hand.get(0).getRank().getValue()) {
+            System.out.println("It's a draw");
         }
+
+        else if  (player1.hand.get(0).getRank().getValue()
+                > player2.hand.get(0).getRank().getValue())
+
+        {
+            System.out.println("Player 1 wins");
+        }
+
+            else {
+            System.out.println("Player 2 wins");
+        }
+
+    }
     }
 
 
@@ -37,4 +46,4 @@ public class Game {
 
 
 
-}
+
