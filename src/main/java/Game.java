@@ -16,10 +16,20 @@ public class Game {
     }
 
     public void dealCard(Player player) {
-        this.shuffleDeck();
         Card removedCard = deck.removeCard();
         player.hand.add(removedCard);
     }
+
+    public Player play(Player player1, Player player2) {
+        if (player1.hand.get(0).getRank().getValue()
+                > player2.hand.get(0).getRank().getValue()){
+            return player1;
+            }
+            else {
+            return player2;
+        }
+    }
+
 
 
 
